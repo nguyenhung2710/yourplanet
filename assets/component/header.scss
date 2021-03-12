@@ -1,2 +1,31 @@
 @import 'variable.scss';
 
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 64px;
+    width: 100%;
+    padding: 0 2rem 0 2rem;
+    z-index: 4;
+    position: relative;
+    .header-logo {
+        display: flex;
+        svg {
+            width: 7.9rem;
+            height: 2.5rem;
+        }
+    }
+}
+
+.dashboard-button {
+    background: #f7f7f7;
+    border: none;
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    cursor: pointer;
+    svg {
+        width: 1.6rem;
+    }
+}

@@ -1,8 +1,16 @@
+@import 'variable.scss';
+
 //Mobile
 @media screen and (max-width: 739px) {
-    * {
-        color: red;
-        font-size: 12px;
+    .viewport__item {
+        &:nth-child(1),
+        &:nth-child(4) {
+            width: 40rem;
+        }
+        &:nth-child(2),
+        &:nth-child(3) {
+            width: 30rem;
+        }
     }
 }
 
