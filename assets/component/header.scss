@@ -9,6 +9,8 @@
     padding: 0 2rem 0 2rem;
     z-index: 4;
     position: relative;
+    transform: translateY(-64px);
+    transition: all .5s;
     .header-logo {
         display: flex;
         svg {

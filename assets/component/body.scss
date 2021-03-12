@@ -6,6 +6,7 @@
     // height: 68rem;
     // position: relative;
     height: 61.5rem;
+    overflow: hidden;
 }
 
 .home {
@@ -30,7 +31,9 @@
             cursor: pointer;
             display: flex;
             align-items: center;
-            transition: background .2s cubic-bezier(1,0,0,1);
+            transform: translate(-50%, 70px);
+            // transition: background .2s cubic-bezier(1,0,0,1);
+            transition: all .5s ease-in 2s;
             svg {
                 width: 1.5rem;
                 margin-right: 10px;
@@ -65,6 +68,16 @@
                 margin: .25rem auto 0;
                 color: #000;
                 display: block;
+                .top {
+                    opacity: 0;
+                    transform: translateX(70px);
+                    transition: all .3s ease-in 2.5s;
+                }
+                .bottom {
+                    opacity: 0;
+                    transform: translateX(70px);
+                    transition: all .3s ease-in 2.8s;
+                }
             }
         }
         &__viewport {
@@ -79,7 +92,9 @@
         left: 2rem;
         position: absolute;
         z-index: 3;
+        opacity: 0;
         color: rgba(70, 70, 70, 0.75);
+        transition: all .6s;
         a {
             &:nth-child(1) {
                 margin-right: 2rem;
@@ -112,7 +127,9 @@
         display: inline-block;
         border-radius: 50%;
         cursor: pointer;
-        transition: background .2s cubic-bezier(1,0,0,1);
+        opacity: 0;
+        // transition: background .2s cubic-bezier(1,0,0,1);
+        transition: all .6s;
         svg {
             height: 1.6rem;
             width: 1.6rem;
