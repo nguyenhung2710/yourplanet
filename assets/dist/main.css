@@ -1,0 +1,11 @@
+* {
+  outline: none;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media screen and (max-width: 739px) {
+  * {
+    color: red;
+    font-size: 12px;
+  }
+}
