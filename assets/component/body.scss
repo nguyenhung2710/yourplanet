@@ -6,7 +6,9 @@
     // height: 68rem;
     // position: relative;
     height: 61.5rem;
-    overflow: hidden;
+    // overflow: hidden;
+    // overflow-y: hidden;
+    z-index: 1;
 }
 
 .home {
@@ -33,7 +35,9 @@
             align-items: center;
             transform: translate(-50%, 70px);
             // transition: background .2s cubic-bezier(1,0,0,1);
-            transition: all .5s ease-in 2s;
+            transition: all .3s ease-in 2s;
+            opacity: 0;
+            z-index: 4;
             svg {
                 width: 1.5rem;
                 margin-right: 10px;
@@ -51,7 +55,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             position: absolute;
-            z-index: 1;
+            z-index: 3;
             &-item {
                 text-align: center;
                 max-width: 45rem;
@@ -150,32 +154,73 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 2;
         &:hover {
             color: unset;
         }
         &:nth-child(1) {
             left: 25%;
             top: 15%;
-            width: 30rem;
-            height: 30rem;
             .viewport {
                 &__animation {
-                    transform: translate(3.2rem, 1.4rem);
-                    img {
+                    transform: translate(-0.6rem, 1.4rem);
+                    z-index: 5;
+                    &-item {
+                        opacity: 0;
                         width: 13rem;
+                        transition: all 0.5s ease-in 2.3s;
+                        transform: translate(-14rem, -10rem);
                     }
                 }
                 &__descript {
-                    &-btn {
-                        background: $color-stuff;
-                        transform: translate(3.4rem, -1.6rem);
+                    &:hover {
+                        .viewport__descript-btn {
+                            background: #fff;
+                        }
+                        .viewport__descript-btn-descript {
+                            clip-path: circle(83% at 39% -34%);
+                            opacity: 1;
+                        }
                     }
-                    p {
-                        transform: translate(6rem, -2rem);
+                    >p {
+                        position: absolute;
+                        top: 19.5rem;
+                        left: 28.5rem;
                         font-size: 1.5rem;
                         font-weight: 700;
                         opacity: 0.7;
+                        z-index: 3;
                     }
+                    &-btn {
+                        background: $color-stuff;
+                        position: absolute;
+                        top: 12rem;
+                        left: 26rem;
+                        transition: all 0.2s ease-in;
+                        z-index: 3;
+                        &-descript {
+                            background: $color-stuff;
+                            position: absolute;
+                            width: 82rem;
+                            height: 40rem;
+                            top: -1rem;
+                            right: -28rem;
+                            clip-path: circle(1% at 53% 48%);
+                            transition: all ease-in-out 0.5s;
+                            pointer-events: none;
+                            z-index: 2;
+                            p {
+                                font-size: 1.15rem;
+                                font-weight: 100;
+                                line-height: 1.6rem;
+                                position: absolute;
+                                top: 24rem;
+                                left: 42.3rem;
+                                width: 17%;
+                            }
+                        }
+                    }
+                    
                 }
             }
         }
@@ -186,21 +231,61 @@
             height: 30rem;
             .viewport {
                 &__animation {
-                    transform: translate(3.4rem, 0rem);
-                    img {
+                    transform: translate(-0.5rem, 0rem);
+                    z-index: 5;
+                    &-item {
+                        opacity: 0;
                         width: 12rem;
+                        transition: all 0.5s ease-in 2.5s;
+                        transform: translate(28rem, -5rem);
                     }
                 }
                 &__descript {
-                    &-btn {
-                        background: $color-water;
-                        transform: translate(8rem, 3.6rem);
+                    &:hover {
+                        .viewport__descript-btn {
+                            background: #fff;
+                        }
+                        .viewport__descript-btn-descript {
+                            clip-path: circle(83% at 60% -51%);
+                            opacity: 1;
+                        }
                     }
-                    p {
-                        transform: translate(10rem, 3rem);
+                    >p {
+                        position: absolute;
+                        top: 19.5rem;
+                        right: -1.5rem;
                         font-size: 1.5rem;
                         font-weight: 700;
                         opacity: 0.7;
+                        z-index: 3;
+                    }
+                    &-btn {
+                        background: $color-water;
+                        position: absolute;
+                        top: 12rem;
+                        right: -3rem;
+                        z-index: 3;
+                        &-descript {
+                            background: $color-water;
+                            position: absolute;
+                            width: 83rem;
+                            height: 35rem;
+                            top: -1rem;
+                            right: -19rem;
+                            clip-path: circle(1% at 76% 48%);
+                            transition: all ease-in-out 0.5s;
+                            pointer-events: none;
+                            z-index: 2;
+                            p {
+                                font-size: 1.15rem;
+                                font-weight: 100;
+                                line-height: 1.6rem;
+                                position: absolute;
+                                top: 24rem;
+                                left: 61rem;
+                                width: 17%;
+                            }
+                        }
                     }
                 }
             }
@@ -208,23 +293,66 @@
         &:nth-child(3) {
             left: 75%;
             top: 75%;
+            width: 30rem;
+            height: 30rem;
             .viewport {
                 &__animation {
-                    transform: translate(4.6rem, -3.6rem);
-                    img {
+                    transform: translate(0.6rem, -3.6rem);
+                    z-index: 5;
+                    &-item {
+                        opacity: 0;
                         width: 17rem;
+                        transition: all 0.5s ease-in 2.7s;
+                        transform: translate(24rem, 21rem);
                     }
                 }
                 &__descript {
-                    &-btn {
-                        background: $color-food;
-                        transform: translate(7.5rem, -4.4rem);
+                    &:hover {
+                        .viewport__descript-btn {
+                            background: #fff;
+                        }
+                        .viewport__descript-btn-descript {
+                            clip-path: circle(83% at 60% 153%);
+                            opacity: 1;
+                        }
                     }
-                    p {
-                        transform: translate(9.6rem, -5rem);
+                    >p {
+                        position: absolute;
+                        top: 11.5rem;
+                        right: -2.7rem;
                         font-size: 1.5rem;
                         font-weight: 700;
                         opacity: 0.7;
+                        z-index: 3;
+                    }
+                    &-btn {
+                        background: $color-food;
+                        position: absolute;
+                        top: 4rem;
+                        right: -5rem;
+                        transition: all 0.2s ease-in;
+                        z-index: 3;
+                        &-descript {
+                            background: $color-food;
+                            position: absolute;
+                            width: 84rem;
+                            height: 35rem;
+                            top: -4.6rem;
+                            right: -19rem;
+                            clip-path: circle(1% at 79% 36%);
+                            transition: all ease-in-out 0.5s;
+                            pointer-events: none;
+                            z-index: 2;
+                            p {
+                                font-size: 1.15rem;
+                                font-weight: 100;
+                                line-height: 1.6rem;
+                                position: absolute;
+                                top: 19rem;
+                                left: 64.2rem;
+                                width: 17%;
+                            }
+                        }
                     }
                 }
             }
@@ -234,29 +362,71 @@
             top: 75%;
             .viewport {
                 &__animation {
-                    transform: translate(4.2rem, -5rem);
-                    img {
+                    transform: translate(0.2rem, -5rem);
+                    z-index: 5;
+                    &-item {
+                        opacity: 0;
                         width: 10rem;
+                        transition: all 0.5s ease-in 2.9s;
+                        transform: translate(-28rem, 23rem);
                     }
                 }
                 &__descript {
-                    &-btn {
-                        background: $color-energy;
-                        transform: translate(-16rem, -0.5rem);
+                    &:hover {
+                        .viewport__descript-btn {
+                            background: #fff;
+                        }
+                        .viewport__descript-btn-descript {
+                            clip-path: circle(83% at 40% 153%);
+                            opacity: 1;
+                        }
                     }
-                    p {
-                        transform: translate(-14.6rem, -1rem);
+                    >p {
+                        position: absolute;
+                        top: 20.4rem;
+                        left: 6.3rem;
                         font-size: 1.5rem;
                         font-weight: 700;
                         opacity: 0.7;
+                        z-index: 3;
+                    }
+                    &-btn {
+                        background: $color-energy;
+                        position: absolute;
+                        top: 13rem;
+                        left: 5rem;
+                        transition: all 0.2s ease-in;
+                        z-index: 3;
+                        &-descript {
+                            background: $color-energy;
+                            position: absolute;
+                            width: 84rem;
+                            height: 35rem;
+                            top: 0.4rem;
+                            right: -30rem;
+                            clip-path: circle(1% at 27% 48%);
+                            transition: all ease-in-out 0.5s;
+                            pointer-events: none;
+                            z-index: 2;
+                            p {
+                                position: absolute;
+                                top: 23rem;
+                                left: 10.5rem;
+                                font-size: 1.15rem;
+                                font-weight: 100;
+                                line-height: 1.6rem;
+                                text-align: end;
+                                width: 18%;
+                            }
+                        }
                     }
                 }
             }
         }
     }
     &__descript {
-        left: 65%;
-        top: calc(50% - 9rem);
+        // left: 65%;
+        // top: calc(50% - 9rem);
         svg {
             width: 2rem;
         }
@@ -268,6 +438,19 @@
             cursor: pointer;
         }
     }
+    // &-background {
+    //     position: absolute;
+    //     top: 11.4rem;
+    //     left: 25.4rem;
+    //     width: 23%;
+    //     height: 23%;
+    //     opacity: 0;
+    //     transform: scale(1.5);
+    //     transition: all 0.5s;
+    //     border: 1px solid $color-stuff;
+    //     border-radius: 50%;
+    //     animation: showViewport 1s linear 10s forwards infinite;
+    // }
 }
 
 [data-tooltip] {
@@ -275,3 +458,11 @@
     text-decoration: underline;
     cursor: pointer;
 }
+
+// [data-name=mojs-shape] {
+//     display: block;
+//     &:nth-of-type(8) {
+//         color: red;
+//         transition: all .5s ease-in 4s;
+//     }
+// }

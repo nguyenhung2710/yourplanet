@@ -1,14 +1,26 @@
-@keyframes introTitleOn {
+@keyframes showNotifi {
     from {
         opacity: 0;
-        transform: translateY(50px);
+        transform: scale(0);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
     }
 }
-@keyframes on {
+
+@keyframes hideNotifi {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+}
+
+@keyframes showContent {
     from {
         opacity: 0;
     }
@@ -16,11 +28,64 @@
         opacity: 1;
     }
 }
-@keyframes off {
+
+@keyframes hideContent {
     from {
-        transform: translateY(50px);
+        opacity: 1;
     }
     to {
-        transform: translateY(0);
+        opacity: 0;
+    }
+}
+
+@keyframes showPulse {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+@keyframes hidePulse {
+    from {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    to {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
+@keyframes hideMore {
+    0% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1.3);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(0);
+    }
+}
+
+@keyframes showViewport {
+    0% {
+        opacity: 0;
+        transform: scale(1.5);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.7);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.9);
     }
 }
